@@ -1,0 +1,68 @@
+:host {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .date-time-container {
+    height: 100%;
+    width: 100%;
+    background-image: url('/assets/images/t2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+  
+    .time-content {
+      position: relative;
+      z-index: 2;
+      color: #ffffff;
+      font-size: 3rem;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      animation: pulse 2s infinite ease-in-out;
+  
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        opacity: 0.9;
+      }
+  
+      p {
+        font-size: 3.5rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  
+//   @keyframes pulse {
+//     0% {
+//       transform: scale(1);
+//       opacity: 0.85;
+//     }
+//     50% {
+//       transform: scale(1.03);
+//       opacity: 1;
+//     }
+//     100% {
+//       transform: scale(1);
+//       opacity: 0.85;
+//     }
+//   }
+  

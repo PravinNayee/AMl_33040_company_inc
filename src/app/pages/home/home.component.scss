@@ -1,0 +1,106 @@
+:host {
+    display: block;
+    // width: 100%;
+    // height: 100%;
+  }
+  
+  .hero {
+    background: linear-gradient(to right, #2a2a72, #009ffd);
+    color: white;
+    height: 60vh;
+    width: auto;
+    text-align: center;
+    padding: 140px 20px 100px;
+  
+    .hero-content {
+      max-width: 800px;
+      margin: auto;
+  
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-size: 1.25rem;
+      }
+  
+      .btn-primary {
+        display: inline-block;
+        margin: 1.5rem 1.5rem 0 0;
+        padding: 12px 28px;
+        background-color: white;
+        color: #2a2a72;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      
+        &:hover {
+          background-color: #f0f0f0;
+          color: #1d1d6b;
+        }
+      
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+      
+    }
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    text-align: center;
+    gap: 40px;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+  
+    .feature {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  
+      .icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+  
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  
+  .cta {
+    background: #2a2a72;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 2.2rem;
+    }
+  
+    .btn-secondary {
+      background: #009ffd;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+  
+      &:hover {
+        background: #007acc;
+      }
+    }
+  }
+  
