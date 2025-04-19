@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: circleci/node:14.17-browsers
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Run unit tests
+          command: npm test -- --watch=false --browsers=ChromeHeadless

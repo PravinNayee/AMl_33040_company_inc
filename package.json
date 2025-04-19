@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:company-inc": "node dist/company-inc/server/server.mjs"
+    "postbuild": "copyfiles dist/company-inc/index.csr.html dist/company-inc/index.html",
+    "serve:ssr:company-inc": "node dist/company-inc/server/server.mjs",
+    "prerender": "ng run company-inc:prerender"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +22,7 @@
     "@angular/platform-server": "^19.2.0",
     "@angular/router": "^19.2.0",
     "@angular/ssr": "^19.2.8",
+    "@nguniversal/express-engine": "^16.2.0",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -32,6 +35,7 @@
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "copyfiles": "^2.4.1",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
