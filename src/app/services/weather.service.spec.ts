@@ -15,7 +15,7 @@
 //   });
 // });
 
- 
+
 import { TestBed } from '@angular/core/testing';
 import { WeatherService } from './weather.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
@@ -48,7 +48,7 @@ describe('WeatherService', () => {
       expect(data.main.temp).toBe(25);
     });
 
-    const req = httpMock.expectOne((r) => r.url.includes('Toronto')); 
+    const req = httpMock.expectOne((r) => r.url.includes('Toronto'));
     expect(req.request.method).toBe('GET');
     req.flush(dummyResponse);
   });
